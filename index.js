@@ -4,6 +4,10 @@ const { PasswordAuthStrategy } = require('@keystonejs/auth-password');
 const { Text, Checkbox, Password } = require('@keystonejs/fields');
 const { GraphQLApp } = require('@keystonejs/app-graphql');
 const { AdminUIApp } = require('@keystonejs/app-admin-ui');
+
+const TopicSchema = require('./lists/Topic.js');
+const CourseSchema = require('./lists/Course.js');
+const TagSchema = require('./lists/Tag.js');
 const initialiseData = require('./initial-data');
 
 const { MongooseAdapter: Adapter } = require('@keystonejs/adapter-mongoose');
@@ -76,6 +80,10 @@ const authStrategy = keystone.createAuthStrategy({
   list: 'User',
   config: { protectIdentities: process.env.NODE_ENV === 'production' },
 });
+
+keystone.createList('Topic', TopicSchema);
+keystone.createList('Course', CourseSchema);
+keystone.createList('Tag', TagSchema);
 
 module.exports = {
   keystone,
