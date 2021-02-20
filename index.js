@@ -6,7 +6,10 @@ const { GraphQLApp } = require('@keystonejs/app-graphql');
 const { AdminUIApp } = require('@keystonejs/app-admin-ui');
 
 const TopicSchema = require('./lists/Topic.js');
+const TopicImageSchema = require('./lists/TopicImage.js');
 const CourseSchema = require('./lists/Course.js');
+const CourseImageSchema = require('./lists/CourseImage.js');
+const CourseFileSchema = require('./lists/CourseFile.js');
 const TagSchema = require('./lists/Tag.js');
 const initialiseData = require('./initial-data');
 
@@ -82,7 +85,10 @@ const authStrategy = keystone.createAuthStrategy({
 });
 
 keystone.createList('Topic', TopicSchema);
+keystone.createList('TopicImage', TopicImageSchema);
 keystone.createList('Course', CourseSchema);
+keystone.createList('CourseImage', CourseImageSchema);
+keystone.createList('CourseFile', CourseFileSchema);
 keystone.createList('Tag', TagSchema);
 
 module.exports = {

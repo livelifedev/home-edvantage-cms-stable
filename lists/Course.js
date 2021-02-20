@@ -16,6 +16,16 @@ module.exports = {
       isRequired: true,
       isMultiline: true,
     },
+    photo: {
+      type: Relationship,
+      ref: 'CourseImage.course',
+      many: false,
+    },
+    product: {
+      type: Relationship,
+      ref: 'CourseFile.course',
+      many: false,
+    },
     tags: {
       type: Relationship,
       ref: 'Tag.courses',

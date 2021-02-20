@@ -11,6 +11,11 @@ module.exports = {
       isRequired: true,
       isMultiline: true,
     },
+    photo: {
+      type: Relationship,
+      ref: 'TopicImage.topic',
+      many: false,
+    },
     status: {
       type: Select,
       options: [
