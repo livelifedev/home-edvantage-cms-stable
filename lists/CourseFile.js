@@ -17,7 +17,7 @@ module.exports = {
       type: File,
       adapter: s3,
     },
-    label: {
+    name: {
       type: Text,
     },
     course: {
@@ -26,5 +26,5 @@ module.exports = {
       many: false,
     },
   },
-  labelField: 'label',
+  labelField: 'name',
 };

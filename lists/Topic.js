@@ -13,7 +13,7 @@ module.exports = {
     },
     photo: {
       type: Relationship,
-      ref: 'TopicImage.topic',
+      ref: 'TopicImage',
       many: false,
     },
     status: {

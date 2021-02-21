@@ -15,14 +15,9 @@ module.exports = {
       type: CloudinaryImage,
       adapter: cloudinary,
     },
-    label: {
+    altText: {
       type: Text,
     },
-    topic: {
-      type: Relationship,
-      ref: 'Topic.photo',
-      many: false,
-    },
   },
-  labelField: 'label',
+  labelField: 'altText',
 };

@@ -18,7 +18,7 @@ module.exports = {
     },
     photo: {
       type: Relationship,
-      ref: 'CourseImage.course',
+      ref: 'CourseImage',
       many: false,
     },
     product: {
