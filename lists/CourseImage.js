@@ -15,7 +15,7 @@ module.exports = {
       type: CloudinaryImage,
       adapter: cloudinary,
     },
-    altText: {
+    label: {
       type: Text,
     },
     course: {
@@ -24,5 +24,5 @@ module.exports = {
       many: false,
     },
   },
-  labelField: 'altText',
+  labelField: 'label',
 };
